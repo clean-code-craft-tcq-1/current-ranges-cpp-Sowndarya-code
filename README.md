@@ -49,7 +49,7 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
    #include <vector>
   
    <vector> int reading;
-   <vector> int minimum;
+   <vector> int minimum; 
    <vector> int maximum;
    <vector> int count;
       

@@ -46,7 +46,7 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
 1. Write the smallest possible failing test.
    
-   #include <vector>
+   #include vector
   
    <vector> int reading;
    <vector> int minimum; 
@@ -60,13 +60,33 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
 1. Write the minimum amount of code that'll make it pass.
 
-    #include <vector>
+    #include vector
     
-    void FindRangeTrends(<vector> &f_count, <vector> &f_minimum, <vector> &f_maximum, <vector> &f_reading)
+    void FindRangeTrends(const <vector> &f_count, <vector> &f_minimum, <vector> &f_maximum, <vector> &f_reading)
     {
     }
 
 1. Write the next failing test.
+      #include vector
+      #include algorithm
+  
+   <vector> int reading;
+   <vector> int minimum; 
+   <vector> int maximum;
+   <vector> int count;
+   Test(RangeTrends, BasicTest)
+   {
+   FindRangeTrends(reading,minimum,maximum,count);
+      for(int i = 0; i < minimum.size(); i++)
+         {                               
+           cout << minimum[i];
+           cout << "-";  
+           cout << maximum[i]; 
+           cout << count[i];
+          }                 
+                                 
+      
+   };
 
 Implement one failing test and at least one passing test:
 
